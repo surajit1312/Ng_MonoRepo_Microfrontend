@@ -2,22 +2,30 @@
 
 This is a repository to illustrate Microfrontend application in Angular v16 using Module Federation controlling state managemet using NgRx.
 
-# Created Workspace
+## Created Workspace
 
 ```
 npx @angular/cli@16.2.10 new Ng_MonoRepo_Microfrontend  --create-application=false
 ```
 
-# Created Application 'Products'
+## Created Application 'Products'
 
 ```
 npx @angular/cli@16.2.10 generate application products --routing --style=scss
 ```
 
-# Created Application 'Cart'
+## Created Application 'Cart'
 
 ```
 npx @angular/cli@16.2.10 generate application cart --routing --style=scss
+```
+
+## Added Module Federation (included in Webpack 5). This allows angular to use custom builder '@angular-architects/module-federation' to the project.
+
+### Type mentioned here as 'host' to make 'products' application behave as host and same host configuration would be added to 'webpack.config.js with port set to 4200'
+
+```
+npx @angular/cli@16.2.10 add @angular-architects/module-federation@16.0.4 --project products --port 4200 --type host
 ```
 
 ## Development server

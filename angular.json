@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/products",
             "index": "projects/products/src/index.html",
@@ -28,7 +28,9 @@
               "projects/products/src/assets"
             ],
             "styles": ["projects/products/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "projects/products/webpack.config.js",
+            "commonChunk": false
           },
           "configurations": {
             "production": {
@@ -44,7 +46,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "extraWebpackConfig": "projects/products/webpack.prod.config.js"
             },
             "development": {
               "buildOptimizer": false,
@@ -58,21 +61,28 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "products:build:production"
+              "browserTarget": "products:build:production",
+              "extraWebpackConfig": "projects/products/webpack.prod.config.js"
             },
             "development": {
               "browserTarget": "products:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4200,
+            "publicHost": "http://localhost:4200",
+            "extraWebpackConfig": "projects/products/webpack.config.js"
+          }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ngx-build-plus:extract-i18n",
           "options": {
-            "browserTarget": "products:build"
+            "browserTarget": "products:build",
+            "extraWebpackConfig": "projects/products/webpack.config.js"
           }
         },
         "test": {
