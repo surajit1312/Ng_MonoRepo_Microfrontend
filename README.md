@@ -1,6 +1,6 @@
 # /NgMonoRepoMicrofrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+This is a repository to illustrate Microfrontend application in Angular v16 using Module Federation controlling state managemet using NgRx.
 
 ## Development server
 
