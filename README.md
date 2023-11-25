@@ -8,6 +8,12 @@ This is a repository to illustrate Microfrontend application in Angular v16 usin
 npx @angular/cli@16.2.10 new Ng_MonoRepo_Microfrontend  --create-application=false
 ```
 
+# Created Application 'Products'
+
+```
+npx @angular/cli@16.2.10 generate application products --routing --style=scss
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
