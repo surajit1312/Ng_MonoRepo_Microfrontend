@@ -14,6 +14,12 @@ npx @angular/cli@16.2.10 new Ng_MonoRepo_Microfrontend  --create-application=fal
 npx @angular/cli@16.2.10 generate application products --routing --style=scss
 ```
 
+# Created Application 'Cart'
+
+```
+npx @angular/cli@16.2.10 generate application cart --routing --style=scss
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
