@@ -7,7 +7,7 @@ module.exports = withModuleFederationPlugin({
   name: "cart",
 
   exposes: {
-    "./Component": "./projects/cart/src/app/app.component.ts",
+    "./CartModule": "./projects/cart/src/app/cart/cart.module.ts",
   },
 
   shared: {

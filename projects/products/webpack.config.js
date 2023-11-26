@@ -5,7 +5,7 @@ const {
 
 module.exports = withModuleFederationPlugin({
   remotes: {
-    cart: "http://localhost:4200/remoteEntry.js",
+    cart: "http://localhost:4300/remoteEntry.js",
   },
 
   shared: {
